@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Momin — Personal Portfolio</title>
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Custom cursor node -->
+  <div id="cursor"></div>
+
+  <!-- ===== Sticky Nav ===== -->
+  <header class="site-header">
+    <div class="container nav-bar">
+      <a href="#home" class="brand">
+        
+        <span>Momin Haider</span>
+      </a>
+
+      <!-- Centered nav -->
+      <nav id="nav" class="nav">
+        <a href="#about">About Me</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Project</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <!-- Resume with DOWNLOAD icon -->
+      <a href="assets/CV.pdf" class="btn btn--solid btn--sm resume-btn" download="Momin Haider Resume.pdf">
+        Resume
+        <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" class="ml8">
+          <path d="M12 3v10m0 0l4-4m-4 4l-4-4M5 21h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+
+      <button id="menuBtn" class="menu-btn" aria-label="Open menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="home">
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-left">
+          <!-- removed the eyebrow line -->
+
+          <h1 class="hero-title">
+            Hello I am <span class="accent">Momin Haider</span><span class="cursor"></span><br>
+            A Software <span class="outline">Developer</span><br>
+            Based In <span class="accent">Pakistan</span>.
+          </h1>
+
+          <p class="hero-lead">
+With a strong interest in technology, I build apps and experiment with AI to create smart, impactful solutions. My focus is on learning, innovating, and contributing to projects that push boundaries.          </p>
+
+          <div class="social-row">
+  <a class="icon-btn" href="https://mail.google.com/mail/?view=cm&fs=1&to=shah.momin.haider.10@gmail.com" target="_blank" rel="noreferrer" aria-label="Gmail">
+    <img class="ico" src="assets/icons/Gmail.svg" alt="">
+  </a>
+  <a class="icon-btn" href="https://facebook.com/your-profile" target="_blank" rel="noreferrer" aria-label="Facebook">
+    <img class="ico" src="assets/icons/Linkedin linked in.svg" alt="">
+  </a>
+  
+  <a class="icon-btn" href="https://github.com/XVARVE" target="_blank" rel="noreferrer" aria-label="GitHub">
+    <img class="ico" src="assets/icons/Brand github.svg" alt="">
+  </a>
+</div>
+
+
+          <hr class="hero-divider" />
+        </div>
+
+        <div class="hero-right">
+          <img class="hero-img" src="assets/guy-working-on-laptop.jpg" alt="Person with laptop illustration" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SKILLS ===== -->
+    <section id="skills" class="section">
+      <div class="container">
+        <h2 class="section-title">My <span class="section-accent">Skills</span></h2>
+
+       <div class="skills-grid skills-grid--assets">
+  <!-- 1 -->
+  <div class="skill-card">
+    <img class="skill-img" src="assets/icons/Brand github.svg" alt="Git icon">
+    <div class="skill-label">Git</div>
+  </div>
+
+  <!-- 2 -->
+  <div class="skill-card">
+    <img class="skill-img" src="assets/icons/java.svg" alt="Java icon">
+    <div class="skill-label">Java</div>
+  </div>
+
+  <!-- 3 -->
+  <div class="skill-card">
+    <img class="skill-img" src="assets/icons/python.svg" alt="Python icon">
+    <div class="skill-label">Python</div>
+  </div>
+
+  <!-- 4 -->
+  <div class="skill-card">
+    <img class="skill-img" src="assets/icons/sql.svg" alt="SQL icon">
+    <div class="skill-label">SQL</div>
+  </div>
+
+  <!-- 5 (new, right end of top row) -->
+  <div class="skill-card">
+    <img class="skill-img" src="assets/icons/Javascript fill.svg" alt="JavaScript icon">
+    <div class="skill-label">JavaScript</div>
+  </div>
+
+  <!-- 6 -->
+  <div class="skill-card">
+    <img class="skill-img" src="assets/icons/C plus plus.svg" alt="C++ icon">
+    <div class="skill-label">C++</div>
+  </div>
+
+  <!-- 7 -->
+  <div class="skill-card">
+    <img class="skill-img" src="assets/icons/dart.svg" alt="Dart icon">
+    <div class="skill-label">Dart</div>
+  </div>
+
+  <!-- 8 -->
+  <div class="skill-card">
+    <img class="skill-img" src="assets/icons/Figma fill.svg" alt="Flutter icon">
+    <div class="skill-label">Figma</div>
+  </div>
+
+  <!-- 9 -->
+  <div class="skill-card">
+    <img class="skill-img" src="assets/icons/firebase.svg" alt="Firebase icon">
+    <div class="skill-label">Firebase</div>
+  </div>
+
+  <!-- 10 (new, right end of bottom row) -->
+  <div class="skill-card">
+    <img class="skill-img" src="assets/icons/Html5 alt.svg" alt="HTML icon">
+    <div class="skill-label">HTML</div>
+  </div>
+</div>
+
+
+
+      </div>
+    </section>
+
+    <!-- ===== EXPERIENCE (dark) ===== -->
+<section id="experience" class="section section--dark">
+  <div class="container">
+    <h2 class="section-title light">My <span class="section-accent">Experience</span></h2>
+
+    <div class="exp-list">
+      <!-- PITB -->
+      <article class="exp-card">
+        <div class="exp-head">
+          <div class="exp-left">
+            <span class="company-badge pitb">P</span>
+            <h3>Software Developer Intern · PITB</h3>
+          </div>
+          <span class="exp-time">Jul 2025 – Sep 2025</span>
+        </div>
+        <p>
+          Contributed to mobile app features in Flutter and UI design; integrated third-party APIs and Firebase, and
+          collaborated with senior engineers on debugging and performance improvements.
+        </p>
+      </article>
+
+      <!-- Urban Unit -->
+      <article class="exp-card">
+        <div class="exp-head">
+          <div class="exp-left">
+            <span class="company-badge uu">U</span>
+            <h3>Research and Development Intern · Urban Unit</h3>
+          </div>
+          <span class="exp-time">Jun 2024 – Aug 2024</span>
+        </div>
+        <p>
+          Assisted research on urban development projects—handling data collection & documentation, analyzing planning
+          models and urban datasets, and supporting training sessions and development programs.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+    <!-- ===== ABOUT ===== -->
+    <section id="about" class="section">
+      <div class="container about-grid">
+        <div class="about-ill">
+          <div class="about-frame">
+            <img class="about-img" src="assets/male-working-on-laptop.jpg" alt="About me illustration" />
+          </div>
+        </div>
+
+        <div class="about-copy">
+          <h2 class="section-title">About <span class="section-accent">Me</span></h2>
+          <p>
+I enjoy building things that move beyond simple apps and into real solutions. Whether it’s a marketplace, a weather app, or a chatbot, I like taking an idea from scratch and turning it into something people can actually use. For me, coding isn’t just about functionality — it’s also about creating experiences that feel smooth, reliable, and engaging.          </p>
+          <p>
+Alongside app development, I’m drawn to the possibilities of Artificial Intelligence. I’ve worked on features like background removal and virtual try-on using computer vision, and I’m always experimenting with ways to make apps smarter. This mix of creativity and problem-solving keeps me motivated to keep exploring and learning.          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PROJECTS (dark) ===== -->
+   <!-- ===== PROJECTS (dark) ===== -->
+<section id="projects" class="section section--dark">
+  <div class="container">
+    <h2 class="section-title light">My <span class="section-accent">Projects</span></h2>
+
+    <!-- Thriftify -->
+    <div class="proj-row">
+      <div class="proj-media"><div class="proj-thumb"></div></div>
+      <div class="proj-copy">
+        <div class="proj-no">01</div>
+        <h3 class="proj-title">Thriftify</h3>
+        <p class="proj-desc">
+          AI-assisted thrifting with virtual try-on, background removal, and a helpful chatbot.
+          Built with Flutter, Firebase, OpenCV, and Flask microservices.
+        </p>
+        <a 
+          href="https://github.com/XVARVE/Thriftify/tree/main" 
+          class="proj-link" 
+          aria-label="Open Thriftify on GitHub" 
+          title="GitHub: Thriftify"
+          target="_blank" 
+          rel="noopener noreferrer"
+        >
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+            <path d="M14 3h7v7M10 14 21 3M21 10v11H3V3h11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Nimbus -->
+    <div class="proj-row proj-row--rev">
+      <div class="proj-copy">
+        <div class="proj-no">02</div>
+        <h3 class="proj-title">Nimbus</h3>
+        <p class="proj-desc">
+          Real-time weather with hourly/7-day forecasts, auto-location, saved cities, and smart rain alerts.
+        </p>
+        <a 
+          href="https://github.com/XVARVE/Nimbus" 
+          class="proj-link" 
+          aria-label="Open Nimbus on GitHub" 
+          title="GitHub: Nimbus"
+          target="_blank" 
+          rel="noopener noreferrer"
+        >
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+            <path d="M14 3h7v7M10 14 21 3M21 10v11H3V3h11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+      <div class="proj-media"><div class="proj-thumb"></div></div>
+    </div>
+
+    <!-- PawPal -->
+    <div class="proj-row">
+      <div class="proj-media"><div class="proj-thumb"></div></div>
+      <div class="proj-copy">
+        <div class="proj-no">03</div>
+        <h3 class="proj-title">PawPal</h3>
+        <p class="proj-desc">
+          Pet adoption + shop app with Firebase RTDB and push notifications (FCM). Friendly UI
+          and smooth onboarding.
+        </p>
+        <a 
+          href="https://github.com/XVARVE/Pawpal" 
+          class="proj-link" 
+          aria-label="Open PawPal on GitHub" 
+          title="GitHub: PawPal"
+          target="_blank" 
+          rel="noopener noreferrer"
+        >
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+            <path d="M14 3h7v7M10 14 21 3M21 10v11H3V3h11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- === SEE MORE BUTTON === -->
+   <div class="see-more-wrapper">
+  <a 
+    href="https://github.com/XVARVE?tab=repositories" 
+    target="_blank" 
+    rel="noopener noreferrer" 
+    class="see-more-btn"
+  >
+    See More
+  </a>
+</div>
+
+  </div>
+</section>
+
+
+    <!-- ===== CONTACT ===== -->
+    <section id="contact" class="section">
+  <div class="container">
+    <h2 class="section-title">Contact <span class="section-accent">Me</span></h2>
+    <div class="contact-grid">
+
+        <form class="contact-form" onsubmit="event.preventDefault(); alert('Thanks! I will reply soon.');">
+          <input type="text" placeholder="Your name" required>
+          <input type="email" placeholder="Email" required>
+         
+          <textarea rows="5" placeholder="How can I help?" required></textarea>
+
+        <div class="contact-actions contact-actions--bar">
+  <!-- CTA is now a square, same size & outlined -->
+ <button class="btn btn--solid btn-lg contact-cta" type="submit">Get In Touch</button>
+
+
+  <div class="social-squares">
+    <a class="icon-square" href="https://mail.google.com/mail/?view=cm&fs=1&to=shah.momin.haider.10@gmail.com" target="_blank" rel="noreferrer" aria-label="Email">
+      <img class="brand-ico gmail" src="assets/icons/gmail.svg" alt="Gmail">
+    </a>
+    <a class="icon-square" href="https://linkedin.com/in/your-linkedin" target="_blank" rel="noopener" aria-label="LinkedIn">
+      <img class="brand-ico linkedin" src="assets/icons/Linkedin linked in.svg" alt="LinkedIn">
+    </a>
+    
+    <a class="icon-square" href="https://github.com/your-github" target="_blank" rel="noopener" aria-label="GitHub">
+      <img class="brand-ico github" src="assets/icons/Brand github.svg" alt="GitHub">
+    </a>
+  </div>
+</div>
+
+
+
+        </form>
+
+        <div class="contact-copy">
+          <h2 class="contact-title">Let’s <span class="outline">talk</span> for<br> Something special</h2>
+          <p class="muted">
+            I seek to push the limits of creativity to create engaging, user-friendly, memorable interactive experiences.
+          </p>
+          <!-- Email & Phone (replace your old email/phone block with this) -->
+<div class="contact-lines">
+  <a class="contact-line" href="https://mail.google.com/mail/?view=cm&fs=1&to=shah.momin.haider.10@gmail.com" target="_blank" rel="noreferrer">
+    <span class="contact-ico-wrap">
+      <!-- your mail icon asset -->
+      <img class="contact-ico" src="assets/icons/Mail.svg" alt="Mail">
+    </span>
+    <span class="contact-text">shah.momin.haider.10@gmail.com</span>
+  </a>
+
+  
+</div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer brand only (right text removed) -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-left">
+        
+        <strong>Momin Haider</strong>
+      </div>
+      <div class="footer-right"></div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
