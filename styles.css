@@ -358,3 +358,293 @@ section,.hero{scroll-margin-top:82px}
   #projects .see-more-btn{ transition: none; }
 }
 
+/* === CONTACT (mobile) — stack layout + clamp icon sizes === */
+@media (max-width: 900px){
+  /* 1) Stack the contact section */
+  .contact-grid{
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+  .contact-copy{
+    margin-top: 6px !important;
+  }
+
+  /* 2) Keep the CTA + squares tidy on small screens */
+  .contact-actions--bar{
+    gap: 14px !important;
+    flex-wrap: wrap !important;
+  }
+  .social-squares{
+    display: flex !important;
+    gap: 14px !important;
+    flex-wrap: wrap !important;
+  }
+  .icon-square{
+    width: 48px !important;
+    height: 48px !important;
+  }
+  .icon-square .brand-ico{
+    width: 22px !important;
+    height: 22px !important;
+    object-fit: contain !important;
+  }
+
+  /* 3) Email line: keep style (not purple/underlined) */
+  a.contact-line,
+  a.contact-line:link,
+  a.contact-line:visited{
+    color: #000 !important;
+    text-decoration: none !important;
+  }
+
+  /* 4) Outline word 'talk' thinner so it doesn't clip */
+  .contact-title .outline{
+    -webkit-text-stroke: 1.2px #000 !important;
+  }
+}
+
+/* === CONTACT SECTION — FINAL FIX === */
+#contact .contact-grid{
+  align-items: start;
+}
+
+/* 1) MOBILE: force a clean single-column stack */
+@media (max-width: 900px){
+  #contact .contact-grid{
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+  /* Keep form first, text second */
+  #contact .contact-form{ order: 1; }
+  #contact .contact-copy{ order: 2; margin-top: 6px !important; }
+
+  /* CTA row wraps nicely */
+  #contact .contact-actions--bar{
+    gap: 14px !important;
+    flex-wrap: wrap !important;
+  }
+}
+
+/* 2) Clamp ALL brand/svg icons in this section (prevents the giant M/GitHub) */
+#contact .icon-square{
+  width: 56px; height: 56px;         /* desktop baseline */
+  display: grid; place-items: center;
+  background: #fff; border: 2px solid #000; border-radius: 12px;
+}
+#contact .icon-square .brand-ico{
+  width: 24px !important; height: 24px !important; object-fit: contain !important;
+  display: block !important;
+}
+
+/* fallback clamp for any stray SVGs/images inside contact area */
+#contact img.brand-ico,
+#contact img[src$=".svg"]{
+  max-width: 28px; height: auto;
+}
+
+/* smaller squares/brands on small phones */
+@media (max-width: 480px){
+  #contact .icon-square{ width: 48px; height: 48px; }
+  #contact .icon-square .brand-ico{ width: 22px !important; height: 22px !important; }
+}
+
+/* 3) Email line: match design (black, no underline) */
+#contact .contact-lines a,
+#contact .contact-lines a:link,
+#contact .contact-lines a:visited{
+  color: #000 !important;
+  text-decoration: none !important;
+  font-weight: 800;
+}
+#contact .contact-lines .contact-ico{
+  width: 16px; height: 16px; display: block; object-fit: contain; filter: brightness(0);
+}
+
+/* 4) Outline word 'talk' thinner on small screens (avoid overlap) */
+@media (max-width: 480px){
+  #contact .contact-title .outline{ -webkit-text-stroke: 1.2px #000; }
+}
+/* === CONTACT actions row — keep border (light gray), inline alignment === */
+#contact .contact-actions--bar{
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  flex-wrap: nowrap !important; /* keep on one line */
+}
+
+#contact .social-squares{
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 12px !important;
+}
+
+/* keep border but make it light gray (#e8e8ea) */
+#contact .icon-square{
+  display: inline-flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  width: 48px !important;
+  height: 48px !important;
+  border: 1.5px solid #e8e8ea !important; /* soft neutral border */
+  background: #fff !important;
+  border-radius: 12px !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+#contact .icon-square .brand-ico{
+  width: 22px !important;
+  height: 22px !important;
+  object-fit: contain !important;
+  filter: brightness(0) !important;
+  transition: transform .2s ease !important;
+}
+
+#contact .icon-square:hover .brand-ico{
+  transform: scale(1.1) !important;
+}
+/* === Contact form: full-width inputs on mobile === */
+@media (max-width: 900px){
+  /* Let the contact section breathe to the edges with small safe gutters */
+  #contact .container{
+    width: 100% !important;
+    max-width: none !important;
+    padding-inline: 12px !important;   /* ~12px left/right gutters */
+  }
+
+  /* Ensure fields truly fill the available width */
+  #contact .contact-form input,
+  #contact .contact-form textarea{
+    display: block !important;
+    width: 100% !important;
+  }
+
+}
+/* === CONTACT: align email icon & text in one horizontal line === */
+#contact .contact-lines{
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;              /* space between icon and text */
+  flex-wrap: nowrap !important;      /* prevent wrapping */
+  margin-top: 10px !important;
+}
+
+#contact .contact-line{
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  color: #000 !important;
+  text-decoration: none !important;
+  font-weight: 800 !important;
+  flex-wrap: nowrap !important;
+}
+
+#contact .contact-ico-wrap{
+  flex: 0 0 auto !important;
+  width: 30px !important;
+  height: 30px !important;
+  display: grid !important;
+  place-items: center !important;
+  background: transparent !important;
+  border: none !important;
+}
+
+#contact .contact-ico{
+  width: 22px !important;
+  height: 22px !important;
+  object-fit: contain !important;
+  filter: brightness(0) !important;
+}
+
+#contact .contact-text{
+  flex: 1 1 auto !important;
+  display: inline-block !important;
+  word-break: keep-all !important;
+  font-size: 1rem !important;
+}
+
+/* === CONTACT: subtle circular hover border on mail icon (desktop only) === */
+@media (hover: hover) and (pointer: fine){
+  #contact .contact-line:hover .contact-ico-wrap{
+    border: 2px solid #000 !important;
+    border-radius: 50% !important;
+    transition: border .2s ease, transform .2s ease;
+    transform: scale(1.08);
+  }
+}
+
+/* ==== Mobile menu: Resume button at bottom (black pill) ==== */
+@media (max-width: 900px){
+  .nav-footer{
+    display: grid;
+    gap: 12px;
+    margin-top: 10px;
+    padding-top: 12px;
+    border-top: 1px dashed rgba(0,0,0,.12);
+  }
+  .nav-resume{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 14px 16px;
+    border-radius: 14px;
+    background: #0a0a0a;           /* black pill */
+    color: #fff;
+    text-decoration: none;
+    font-weight: 800;
+    border: 1px solid #0a0a0a;
+    transition: transform .15s ease, opacity .15s ease;
+  }
+  .nav-resume:active{ transform: translateY(1px); opacity:.95; }
+
+  /* hide the desktop resume button in header on mobile (keeps header clean) */
+  .resume-btn{ display: none !important; }
+}
+
+/* Desktop: never show the mobile menu footer */
+@media (min-width: 901px){
+  .nav-footer{ display: none !important; }
+}
+/* Mobile menu: Resume button at bottom (black pill) */
+/* === Mobile menu: Resume button (black, white text, download icon left) === */
+@media (max-width: 900px){
+  .nav-footer{
+    display: grid;
+    gap: 12px;
+    margin-top: 10px;
+    padding-top: 12px;
+    border-top: 1px dashed rgba(0,0,0,.12);
+  }
+  .nav-resume{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 14px 16px;
+    border-radius: 14px;
+    background: #0a0a0a;            /* black background */
+    color: #fff !important;         /* white text */
+    text-decoration: none;
+    font-weight: 800;
+    border: 1px solid #0a0a0a;
+    transition: transform .15s ease, opacity .15s ease;
+  }
+  .nav-resume svg path{ stroke: #fff !important; }  /* white icon */
+  .nav-resume:active{ transform: translateY(1px); opacity:.95; }
+
+  /* hide desktop resume in header on mobile */
+  .resume-btn{ display: none !important; }
+}
+
+/* Desktop: never show mobile footer */
+@media (min-width: 901px){
+  .nav-footer{ display: none !important; }
+}
+
+
+
+
